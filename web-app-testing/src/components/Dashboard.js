@@ -1,8 +1,12 @@
 import React from 'react';
+import { tsPropertySignature } from '@babel/types';
 
-const Dashboard = () => {
+const Dashboard = props => {
     return (
-        <div>Dashboard</div>
+        <div>
+            <button onClick={props.changeBall}>Ball</button>
+            <button onClick={props.changeStrike}>Strike</button>
+        </div>
     )
 }
 
