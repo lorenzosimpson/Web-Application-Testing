@@ -6,6 +6,9 @@ const Dashboard = props => {
         <div>
             <button onClick={props.changeBall}>Ball</button>
             <button onClick={props.changeStrike}>Strike</button>
+            <button onClick={props.reset}>Hit</button>
+            <button onClick={props.foul}>Foul</button>
+            <button onClick={props.reset}>Reset Game</button>
         </div>
     )
 }

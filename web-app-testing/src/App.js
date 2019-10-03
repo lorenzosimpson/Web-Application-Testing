@@ -41,16 +41,21 @@ function App() {
     }
   
   }
-  // const reset = () => {
-  //   if (ball === 4 || strike === 3) {
-  //     setBall(0)
-  //     setStrike(0);
-  //   }
-  // }
+  
+  const foul = () => {
+    //a foul increases strikes up to 2. With no strikes, a foul makes it 1 strike. With 1 strike, a foul makes it 2 strikes. With two strikes a foul has no effect, count stays at 2 strikes.
+    if (strike === 0) {
+      setStrike(1)
+    }
+    else if (strike === 1) {
+      setStrike(2)
+    }
+  }
+
   return (
     <div className="App">
       <Display ball={ball} strike={strike}/>
-      <Dashboard changeBall={changeBall} changeStrike={changeStrike}/>
+      <Dashboard changeBall={changeBall} changeStrike={changeStrike} foul={foul} reset={reset}/>
     </div>
   );
 }
