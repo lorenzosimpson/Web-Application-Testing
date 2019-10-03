@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Display from './components/Display';
 import Dashboard from './components/Dashboard';
@@ -27,7 +26,6 @@ function App() {
     else if (strike === 2) {
       reset()
     }
-  
   }
 
   const changeStrike = () => {
@@ -39,7 +37,6 @@ function App() {
     else if (ball === 3) {
       reset()
     }
-  
   }
   
   const foul = () => {
