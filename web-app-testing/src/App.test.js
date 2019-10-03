@@ -12,7 +12,7 @@ test('Balls count should reset to 0 after 4 clicks', () => {
   fireEvent.click(getByTestId('ball-button'));
   fireEvent.click(getByTestId('ball-button'));
   fireEvent.click(getByTestId('ball-button'));
-  
+
   expect(getByTestId('ball-display').textContent).toBe('Ball 0');
 });
 
@@ -24,3 +24,10 @@ test('Strikes count should reset to 0 after 3 clicks', () => {
 
   expect(getByTestId('strike-display').textContent).toBe('Strike 0');
 })
+
+test('Hits button should reset balls to 0', () => {
+  const { getByTestId } = render(<App />);
+  fireEvent.click(getByTestId('hits-button'));
+
+  expect(getByTestId('ball-display').textContent).toBe('Ball 0')
+}) 
