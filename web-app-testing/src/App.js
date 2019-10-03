@@ -10,8 +10,9 @@ function App() {
   const [ball, setBall] = useState(0);
   const [strike, setStrike] = useState(0);
 
-  const resetBall = () => {
+  const reset = () => {
     setBall(0);
+    setStrike(0)
   }
   const resetStrike = () => {
     setStrike(0);
@@ -20,12 +21,11 @@ function App() {
   const changeBall = () => {
     setBall(ball + 1)
 
-    if (ball === 4 ) {
-      resetBall();
-      resetStrike();
+    if (ball === 3 ) {
+      reset()
     }
-    else if (strike === 3) {
-      resetBall()
+    else if (strike === 2) {
+      reset()
     }
   
   }
@@ -33,12 +33,11 @@ function App() {
   const changeStrike = () => {
     setStrike(strike + 1)
 
-    if (strike === 3 ) {
-      resetStrike();
-      resetBall();
+    if (strike === 2 ) {
+      reset()
     }
-    else if (ball === 4) {
-      resetStrike()
+    else if (ball === 3) {
+      reset()
     }
   
   }
